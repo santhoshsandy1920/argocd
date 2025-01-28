@@ -31,7 +31,7 @@ metadata:
   labels:
     app: lb-service
 spec:
-  type: NodePort  # Use NodePort instead of LoadBalancer
+  type: LoadBalancer  # Use NodePort instead of LoadBalancer
   ports:
   - port: 80           # The port exposed within the cluster
     targetPort: 5000    # The port on which your Flask app is running inside the container
