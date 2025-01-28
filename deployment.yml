@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: santhhoshkumar/python:replaceImageTag
+      - image: santhhoshkumar/python
         name: flaskdemo
         resources: {}
 status: {}
