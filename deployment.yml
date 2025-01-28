@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: nginx
+      - image: praveen22233/netflix
         name: flaskdemo
         resources: {}
 status: {}
@@ -34,7 +34,7 @@ spec:
   type: LoadBalancer  # Use NodePort instead of LoadBalancer
   ports:
   - port: 80           # The port exposed within the cluster
-    targetPort: 5000    # The port on which your Flask app is running inside the container
-    nodePort: 30080     # Optional: specify a static port from the NodePort range (30000-32767)
+    targetPort: 80    # The port on which your Flask app is running inside the container
+  #  nodePort: 30080     # Optional: specify a static port from the NodePort range (30000-32767)
   selector:
     app: flaskdemo
